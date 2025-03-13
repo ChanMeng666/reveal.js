@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Sanicle-AI: Women's Health Platform for Workplace Wellness</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -12,12 +12,323 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		
+		<style>
+			:root {
+				--sanicle-red: #EE4C23;
+				--sanicle-teal: #167d83;
+				--sanicle-pink: #FF6B98;
+			}
+			
+			.reveal {
+				background-color: rgba(0, 0, 0, 0.85);
+			}
+			
+			.reveal-viewport {
+				background-color: #000;
+			}
+			
+			.logo {
+				max-width: 160px;
+				background: none;
+				box-shadow: none;
+				border: none;
+			}
+			
+			.logo-corner {
+				position: absolute;
+				top: 15px;
+				left: 15px;
+				width: 80px;
+				z-index: 100;
+				opacity: 0.8;
+			}
+			
+			.reveal section img {
+				border: none;
+				box-shadow: none;
+				background: none;
+			}
+			
+			.reveal h1 {
+				color: var(--sanicle-red);
+				text-transform: none;
+				font-size: 2.2em;
+				margin-bottom: 0.3em;
+			}
+			
+			.reveal h2 {
+				color: var(--sanicle-teal);
+				text-transform: none;
+				font-size: 1.6em;
+				margin-bottom: 8px;
+			}
+			
+			.reveal h3 {
+				color: var(--sanicle-pink);
+				text-transform: none;
+				font-size: 1.2em;
+				margin-bottom: 0.5em;
+			}
+			
+			.reveal p, .reveal li {
+				font-size: 0.8em;
+			}
+			
+			.reveal .slides {
+				text-align: left;
+			}
+			
+			.reveal .slides section.center {
+				text-align: center;
+			}
+			
+			.highlight-red {
+				color: var(--sanicle-red);
+				font-weight: bold;
+			}
+			
+			.highlight-teal {
+				color: var(--sanicle-teal);
+				font-weight: bold;
+			}
+			
+			.highlight-pink {
+				color: var(--sanicle-pink);
+				font-weight: bold;
+			}
+			
+			.content-box {
+				position: absolute;
+				top: 75%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				width: 30%;
+				background-color: rgba(0, 0, 0, 0.6);
+				padding: 12px;
+				border-radius: 8px;
+				border: 2px solid var(--sanicle-teal);
+				font-size: 0.7em;
+				text-align: center;
+			}
+			
+			.content-box-centered {
+				position: absolute;
+				top: 75%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				width: 50%;
+				background-color: rgba(0, 0, 0, 0.6);
+				padding: 12px;
+				border-radius: 8px;
+				border: 2px solid var(--sanicle-red);
+				font-size: 0.9em;
+				text-align: center;
+			}
+			
+			.content-box ul {
+				margin: 0;
+				padding-left: 0;
+				list-style-type: none;
+				text-align: center;
+			}
+			
+			.content-box li {
+				margin-bottom: 0.3em;
+				line-height: 1.2;
+			}
+			
+			.feature-icon {
+				font-size: 0.9em;
+				margin-right: 0.2em;
+			}
+			
+			.badge {
+				display: inline-block;
+				padding: 2px 4px;
+				border-radius: 3px;
+				font-size: 0.6em;
+				font-weight: bold;
+				margin-left: 3px;
+				vertical-align: middle;
+			}
+			
+			.badge-complete {
+				background-color: var(--sanicle-teal);
+				color: white;
+			}
+			
+			.badge-progress {
+				background-color: var(--sanicle-red);
+				color: white;
+			}
+			
+			.progress {
+				color: var(--sanicle-red) !important;
+			}
+			
+			.controls button {
+				color: var(--sanicle-teal) !important;
+			}
+			
+			.title-box {
+				position: absolute;
+				top: 75%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.5);
+				padding: 16px;
+				border-radius: 12px;
+				width: 60%;
+			}
+			
+			.ai-highlight {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				background-color: rgba(238, 76, 35, 0.8);
+				color: white;
+				padding: 6px 12px;
+				border-radius: 16px;
+				font-weight: bold;
+				font-size: 1em;
+				z-index: 100;
+			}
+			
+			/* 响应式调整 */
+			@media (max-height: 700px) {
+				.content-box, .content-box-centered, .title-box {
+					top: 70%;
+				}
+				
+				.content-box {
+					width: 40%;
+				}
+				
+				.content-box-centered {
+					width: 60%;
+				}
+			}
+			
+			@media (max-height: 500px) {
+				.content-box, .content-box-centered, .title-box {
+					top: 65%;
+				}
+				
+				.reveal h1 {
+					font-size: 1.8em;
+				}
+				
+				.reveal h2 {
+					font-size: 1.4em;
+				}
+				
+				.reveal h3 {
+					font-size: 1em;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<!-- Title Slide -->
+				<section data-background-video="sanicle-ai-presentation/video/hr-health-events.mp4" data-background-opacity="1.0" data-background-video-loop>
+					<div class="title-box">
+						<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo">
+						<h1>Sanicle-AI</h1>
+						<h3>Women's Health Platform for Workplace Wellness</h3>
+					</div>
+				</section>
+
+				<!-- Employee Experience - Health Calendar -->
+				<section data-background-video="sanicle-ai-presentation/video/employee-period-calendar.mp4" data-background-opacity="1.0" data-background-video-loop>
+					<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo-corner">
+					<div class="content-box">
+						<h2>Health Calendar</h2>
+						<ul>
+							<li><span class="highlight-pink">Track menstrual cycles</span></li>
+							<li><span class="highlight-teal">Monitor symptoms & patterns</span></li>
+							<li><span class="highlight-red">Personalized insights</span></li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- Resource Library -->
+				<section data-background-video="sanicle-ai-presentation/video/employee-health-resource-library.mp4" data-background-opacity="1.0" data-background-video-loop>
+					<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo-corner">
+					<div class="content-box">
+						<h2>Resource Library</h2>
+						<ul>
+							<li><span class="highlight-red">Educational materials</span></li>
+							<li><span class="highlight-teal">Expert articles & guides</span></li>
+							<li><span class="highlight-pink">Searchable knowledge base</span></li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- AI Health Assistant Demo -->
+				<section data-background-video="sanicle-ai-presentation/video/employee-consult-sani-assistant.mp4" data-background-opacity="1.0" data-background-video-loop>
+					<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo-corner">
+					<div class="ai-highlight">AI-Powered Assistant</div>
+					<div class="content-box">
+						<h2>Sani: AI Health Assistant</h2>
+						<ul>
+							<li><span class="highlight-red">Personalized health advice</span></li>
+							<li><span class="highlight-teal">24/7 support & guidance</span></li>
+							<li><span class="highlight-pink">Privacy-focused conversations</span></li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- AI Assistant Highlight -->
+				<section data-background-color="black">
+					<div class="content-box-centered">
+						<h1 style="color: var(--sanicle-pink);">AI-Powered Health Assistant</h1>
+						<h3>Project Highlight</h3>
+						<p style="margin-top: 15px; font-size: 1em;">
+							<span class="highlight-teal">Advanced Natural Language Processing</span> | 
+							<span class="highlight-red">Google AI Integration</span> | 
+							<span class="highlight-pink">Symptom Analysis</span>
+						</p>
+					</div>
+				</section>
+
+				<!-- Events System -->
+				<section data-background-video="sanicle-ai-presentation/video/employee-health-events-calendar.mp4" data-background-opacity="1.0" data-background-video-loop>
+					<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo-corner">
+					<div class="content-box">
+						<h2>Health Events</h2>
+						<ul>
+							<li><span class="highlight-red">Webinars & workshops</span></li>
+							<li><span class="highlight-teal">One-click registration</span></li>
+							<li><span class="highlight-pink">Calendar integration</span></li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- HR Dashboard Features -->
+				<section data-background-video="sanicle-ai-presentation/video/hr-resource-management.mp4" data-background-opacity="1.0" data-background-video-loop>
+					<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo-corner">
+					<div class="content-box">
+						<h2>HR Dashboard</h2>
+						<ul>
+							<li><span class="highlight-red">Resource management</span></li>
+							<li><span class="highlight-teal">Events administration</span></li>
+							<li><span class="highlight-pink">Anonymized data insights</span></li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- Thank You Slide -->
+				<section data-background-video="sanicle-ai-presentation/video/hr-employee-feedback.mp4" data-background-opacity="1.0" data-background-video-loop>
+					<div class="title-box">
+						<h1>Thank You</h1>
+						<h3>Questions & Discussion</h3>
+						<p style="font-size: 0.9em;">Contact: <a href="mailto:chanmeng@sanicle.cloud" style="color: var(--sanicle-teal);">chanmeng@sanicle.cloud</a></p>
+					</div>
+				</section>
 			</div>
 		</div>
 
@@ -31,7 +342,13 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				slideNumber: false,
+				autoPlayMedia: true,
+				transition: 'fade',
+				backgroundTransition: 'fade',
+				controls: true,
+				progress: true,
+				center: false,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
