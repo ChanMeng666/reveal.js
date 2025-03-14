@@ -233,6 +233,86 @@
 					font-size: 1em;
 				}
 			}
+			
+			/* 时间线样式 */
+			.timeline-container {
+				position: static;
+				display: flex;
+				flex-direction: column;
+				width: 80%;
+				max-width: 900px;
+				margin: 0 auto;
+				padding-top: 10px;
+				transform: none;
+			}
+			
+			.timeline-item {
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: 20px;
+			}
+			
+			.timeline-date {
+				background-color: var(--sanicle-primary);
+				color: white;
+				padding: 8px 15px;
+				border-radius: 20px;
+				font-weight: bold;
+				font-size: 0.9em;
+				margin-right: 20px;
+				min-width: 120px;
+				text-align: center;
+				flex-shrink: 0;
+			}
+			
+			.timeline-content {
+				flex: 1;
+				background-color: rgba(0, 0, 0, 0.7);
+				padding: 12px 15px;
+				border-radius: 8px;
+				border-left: 4px solid var(--sanicle-pink);
+			}
+			
+			.timeline-content h3 {
+				margin-top: 0;
+				margin-bottom: 3px;
+				color: var(--sanicle-pink);
+				font-size: 1.2em;
+			}
+			
+			.timeline-content p {
+				margin: 0;
+				font-size: 0.9em;
+			}
+			
+			/* 时间线响应式调整 */
+			@media screen and (min-height: 800px) {
+				.timeline-item {
+					margin-bottom: 30px;
+				}
+				
+				.timeline-container {
+					padding-top: 20px;
+				}
+			}
+			
+			@media screen and (max-height: 700px) {
+				.timeline-item {
+					margin-bottom: 15px;
+				}
+				
+				.timeline-content {
+					padding: 10px;
+				}
+				
+				.timeline-content h3 {
+					font-size: 1.1em;
+				}
+				
+				.timeline-content p {
+					font-size: 0.8em;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -246,18 +326,55 @@
 						<p style="font-size: 0.5em;">Specializing in AI Integration for Web & Mobile Platforms</p>
 					</div>
 				</section>
+				
+				<!-- Development Timeline Slide -->
+				<section data-background-color="#000000" data-transition="slide">
+					<h2 style="color: var(--sanicle-primary); margin-bottom: 30px; text-align: center; margin-top: 30px;">Development Timeline</h2>
+					
+					<div class="timeline-container">
+						<div class="timeline-item fragment fade-up" data-fragment-index="1">
+							<div class="timeline-date">Feb 27, 2025</div>
+							<div class="timeline-content">
+								<h3>Project Kickoff</h3>
+								<p>Official development start as an independent developer</p>
+							</div>
+						</div>
+						
+						<div class="timeline-item fragment fade-up" data-fragment-index="2">
+							<div class="timeline-date">Mar 1, 2025</div>
+							<div class="timeline-content">
+								<h3>First Milestone</h3>
+								<p>Initial demo presentation to Sanicle team</p>
+							</div>
+						</div>
+						
+						<div class="timeline-item fragment fade-up" data-fragment-index="3">
+							<div class="timeline-date">Mar 9, 2025</div>
+							<div class="timeline-content">
+								<h3>Second Milestone</h3>
+								<p>Feature-complete demo presentation to Sanicle team</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
 				<!-- Title Slide -->
 				<section data-background-video="sanicle-ai-presentation/video/employee-login-2x.mp4" data-background-opacity="1.0" data-background-video-loop>
 					<div class="title-box">
 						<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo">
-						<!-- <h3>Women's Health Platform for Workplace Wellness</h3> -->
+						<h3>Women's Health Platform for Workplace Wellness</h3>
+						<p style="font-size: 0.7em;">Next.js 15 | TypeScript | Tailwind CSS | PostgreSQL | Google AI</p>
 					</div>
 				</section>
 
 				<section data-background-video="sanicle-ai-presentation/video/employee-remember-me-2x.mp4" data-background-opacity="1.0" data-background-video-loop>
 					<div class="content-box">
-						<h2>Remember Me</h2>
+						<h2>Secure Authentication</h2>
+						<ul>
+							<li><span class="highlight-pink">Multi-role login system <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-pink">Remember me functionality <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-pink">Privacy-focused design <span class="badge badge-complete">Complete</span></span></li>
+						</ul>
 					</div>
 				</section>
 
@@ -267,9 +384,9 @@
 					<div class="content-box">
 						<h2>Health Calendar</h2>
 						<ul>
-							<li><span class="highlight-pink">Track menstrual cycles</span></li>
-							<li><span class="highlight-pink">Monitor symptoms & patterns</span></li>
-							<li><span class="highlight-pink">Personalized insights</span></li>
+							<li><span class="highlight-pink">Track menstrual cycles <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-pink">Monitor symptoms & patterns <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-pink">Receive personalized insights <span class="badge badge-progress">In Progress</span></span></li>
 						</ul>
 					</div>
 				</section>
@@ -280,9 +397,9 @@
 					<div class="content-box">
 						<h2>Resource Library</h2>
 						<ul>
-							<li><span class="highlight-pink">Educational materials</span></li>
-							<li><span class="highlight-pink">Expert articles & guides</span></li>
-							<li><span class="highlight-pink">Searchable knowledge base</span></li>
+							<li><span class="highlight-pink">Access health guides <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-pink">Browse categorized articles <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-pink">Save favorite resources <span class="badge badge-complete">Complete</span></span></li>
 						</ul>
 					</div>
 				</section>
@@ -293,9 +410,9 @@
 					<div class="content-box">
 						<h2>Health Events</h2>
 						<ul>
-							<li><span class="highlight-pink">Webinars & workshops</span></li>
-							<li><span class="highlight-pink">One-click registration</span></li>
-							<li><span class="highlight-pink">Calendar integration</span></li>
+							<li><span class="highlight-pink">Register for webinars & workshops <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-pink">Sync with personal calendar <span class="badge badge-progress">In Progress</span></span></li>
+							<li><span class="highlight-pink">Receive event reminders <span class="badge badge-progress">In Progress</span></span></li>
 						</ul>
 					</div>
 				</section>
@@ -303,7 +420,12 @@
 				<section data-background-video="sanicle-ai-presentation/video/employee-submit-feedback-2x.mp4" data-background-opacity="1.0" data-background-video-loop>
 					<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo-corner">
 					<div class="content-box">
-						<h2>Submit Feedback</h2>
+						<h2>Feedback System</h2>
+						<ul>
+							<li><span class="highlight-pink">Submit anonymous feedback <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-pink">Rate platform features <span class="badge badge-progress">In Progress</span></span></li>
+							<li><span class="highlight-pink">Request new resources <span class="badge badge-progress">In Progress</span></span></li>
+						</ul>
 					</div>
 				</section>
 
@@ -313,9 +435,9 @@
 					<div class="content-box">
 						<h2>Ask Sani</h2>
 						<ul>
-							<li><span class="highlight-pink">Personalized health advice</span></li>
-							<li><span class="highlight-pink">24/7 support & guidance</span></li>
-							<li><span class="highlight-pink">Privacy-focused conversations</span></li>
+							<li><span class="highlight-pink">Get personalized health advice <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-pink">Access 24/7 AI support <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-pink">Maintain conversation privacy <span class="badge badge-complete">Complete</span></span></li>
 						</ul>
 					</div>
 				</section>
@@ -323,12 +445,7 @@
 				<!-- AI Assistant Highlight -->
 				<section data-background-video="sanicle-ai-presentation/video/hr-consult-sani-assistant-2x.mp4" data-background-opacity="1.0" data-background-video-loop>
 					<div class="content-box-centered">
-						<h1 style="color: var(--sanicle-pink);">AI-Powered Health Assistant</h1>
-						<p style="margin-top: 15px; font-size: 1em;">
-							<span class="highlight-light">Advanced Natural Language Processing</span> | 
-							<span class="highlight-light">Google AI Integration</span> | 
-							<span class="highlight-light">Symptom Analysis</span>
-						</p>
+						<h3 style="color: var(--sanicle-pink);">AI-Powered Health Assistant</h3>
 					</div>
 				</section>
 
@@ -338,22 +455,32 @@
 					<div class="content-box">
 						<h2>HR Dashboard</h2>
 						<ul>
-							<li><span class="highlight-primary">Resource management</span></li>
-							<li><span class="highlight-primary">Events administration</span></li>
-							<li><span class="highlight-primary">Anonymized data insights</span></li>
+							<li><span class="highlight-primary">Manage company resources <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-primary">View anonymized health data <span class="badge badge-progress">In Progress</span></span></li>
+							<li><span class="highlight-primary">Access analytics insights <span class="badge badge-progress">In Progress</span></span></li>
 						</ul>
 					</div>
 				</section>
 
 				<section data-background-video="sanicle-ai-presentation/video/hr-health-events-2x.mp4" data-background-opacity="1.0" data-background-video-loop>
 					<div class="content-box">
-						<h2>Health Events</h2>
+						<h2>Event Management</h2>
+						<ul>
+							<li><span class="highlight-primary">Create health webinars <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-primary">Schedule wellness workshops <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-primary">Track attendance & engagement <span class="badge badge-complete">Complete</span></span></li>
+						</ul>
 					</div>
 				</section>
 
 				<section data-background-video="sanicle-ai-presentation/video/hr-employee-feedback-2x.mp4" data-background-opacity="1.0" data-background-video-loop>
 					<div class="content-box">
-						<h2>Employee Feedback</h2>
+						<h2>Feedback Analytics</h2>
+						<ul>
+							<li><span class="highlight-primary">Review anonymous feedback <span class="badge badge-complete">Complete</span></span></li>
+							<li><span class="highlight-primary">Analyze satisfaction metrics <span class="badge badge-progress">In Progress</span></span></li>
+							<li><span class="highlight-primary">Identify improvement areas <span class="badge badge-progress">In Progress</span></span></li>
+						</ul>
 					</div>
 				</section>
 				
