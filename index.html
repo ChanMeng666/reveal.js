@@ -313,6 +313,70 @@
 					font-size: 0.8em;
 				}
 			}
+			
+			/* 部署和文档页面样式 */
+			.deployment-container {
+				display: flex;
+				justify-content: space-between;
+				width: 90%;
+				margin: 0 auto;
+				gap: 20px;
+			}
+			
+			.deployment-item {
+				flex: 1;
+				position: relative;
+			}
+			
+			.deployment-image {
+				width: 100%;
+				border-radius: 8px;
+				border: 2px solid var(--sanicle-primary);
+				box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+			}
+			
+			.deployment-caption {
+				background-color: rgba(0,0,0,0.7);
+				padding: 12px;
+				border-radius: 8px;
+				margin-top: 15px;
+				border-left: 4px solid var(--sanicle-pink);
+			}
+			
+			.deployment-caption h3 {
+				color: var(--sanicle-pink);
+				margin: 0 0 8px 0;
+				font-size: 1.1em;
+			}
+			
+			.deployment-caption p {
+				margin: 0;
+				font-size: 0.8em;
+			}
+			
+			/* 响应式调整 */
+			@media screen and (max-width: 768px) {
+				.deployment-container {
+					flex-direction: column;
+					width: 95%;
+				}
+				
+				.deployment-item {
+					margin-bottom: 20px;
+				}
+				
+				.deployment-caption {
+					padding: 10px;
+				}
+				
+				.deployment-caption h3 {
+					font-size: 1em;
+				}
+				
+				.deployment-caption p {
+					font-size: 0.75em;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -355,6 +419,24 @@
 								<p>Feature-complete demo presentation to Sanicle team</p>
 							</div>
 						</div>
+					</div>
+				</section>
+				
+				<!-- Authentication Redirect Fix Slide -->
+				<section data-background-image="sanicle-ai-presentation/image/post-on-vercel-1.png" data-background-size="100% auto" data-background-position="center" data-transition="fade">
+					<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo-corner">
+					<div class="content-box" style="width: 60%; background-color: rgba(0, 0, 0, 0.5); border: 2px solid var(--sanicle-primary); top: 65%;">
+						<h2>Authentication Redirect Fix</h2>
+						<p style="font-size: 0.9em; line-height: 1.4; margin-top: 10px;">Fixed critical Next.js 15 & NextAuth 5 redirection issue in production. Documented the solution in a detailed technical article to help other developers facing similar challenges.</p>
+					</div>
+				</section>
+
+				<!-- Technical Documentation Slide -->
+				<section data-background-image="sanicle-ai-presentation/image/post-on-vercel-2.png" data-background-size="100% auto" data-background-position="center" data-transition="fade">
+					<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo-corner">
+					<div class="content-box" style="width: 60%; background-color: rgba(0, 0, 0, 0.5); border: 2px solid var(--sanicle-primary); top: 65%;">
+						<h2>Recognition from Vercel</h2>
+						<p style="font-size: 0.9em; line-height: 1.4; margin-top: 10px;">Received appreciation from Vercel Staff for documenting this complex authentication issue.</p>
 					</div>
 				</section>
 
@@ -481,6 +563,24 @@
 							<li><span class="highlight-primary">Analyze satisfaction metrics <span class="badge badge-progress">In Progress</span></span></li>
 							<li><span class="highlight-primary">Identify improvement areas <span class="badge badge-progress">In Progress</span></span></li>
 						</ul>
+					</div>
+				</section>
+				
+				<!-- System Architecture Diagram Slide -->
+				<section data-background-image="sanicle-ai-presentation/image/System-Architecture-Diagram.svg" data-background-size="100% auto" data-background-position="center" data-background-color="#ffffff" data-transition="fade">
+					<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo-corner">
+					<div class="content-box" style="width: 50%; background-color: rgba(0, 0, 0, 0.4); border: 2px solid var(--sanicle-primary); top: 75%;">
+						<h2 style="color: var(--sanicle-pink);">Three-Tier Architecture</h2>
+						<p style="font-size: 0.9em; line-height: 1.4; margin-top: 10px;">Next.js frontend + API routes + PostgreSQL database. Enhanced with Redis cache for speed and Vercel Blob Storage for secure file handling.</p>
+					</div>
+				</section>
+				
+				<!-- User Authentication Flow Slide -->
+				<section data-background-image="sanicle-ai-presentation/image/User-Authentication-Flow.svg" data-background-size="auto 100%" data-background-position="center" data-background-color="#ffffff" data-transition="fade">
+					<img src="sanicle-ai-presentation/image/sanicle_logo.svg" alt="Sanicle Logo" class="logo-corner">
+					<div class="content-box" style="width: 50%; background-color: rgba(0, 0, 0, 0.4); border: 2px solid var(--sanicle-primary); top: 75%;">
+						<h2 style="color: var(--sanicle-pink);">Role-Based Authentication</h2>
+						<p style="font-size: 0.9em; line-height: 1.4; margin-top: 10px;">Secure login with NextAuth.js and Redis session caching. Smart redirection to employee, admin, or HR dashboards based on user roles.</p>
 					</div>
 				</section>
 				
