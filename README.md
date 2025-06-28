@@ -976,8 +976,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <!-- Project Links -->
 [official-site]: https://revealjs.com
 [docs]: https://revealjs.com/installation
-[demo-link]: https://revealjs.com/demo
-[project-link]: https://revealjs.com/demo
+[demo-link]: https://chanmeng666.github.io/reveal.js/
+[project-link]: https://chanmeng666.github.io/reveal.js/
 
 <!-- GitHub Links -->
 [github-issues-link]: https://github.com/hakimel/reveal.js/issues
